@@ -14,6 +14,7 @@ import {
   syncRemoveFromCartValues,
 } from "../../redux/features/productsSlice";
 import { Link } from "react-router-dom";
+import { urlFor } from "../../client";
 
 const ItemDetails = ({
   itemData,
