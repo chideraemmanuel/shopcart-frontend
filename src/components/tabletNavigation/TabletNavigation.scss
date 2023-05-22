@@ -1,0 +1,85 @@
+.tablet-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  svg {
+    font-size: var(--nav-svg-size);
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    > svg {
+      font-size: var(--nav-svg-size);
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    font-size: var(--font-size);
+
+    &--search {
+      position: relative;
+
+      input {
+        outline: none;
+        border: 1px solid var(--light-grey);
+        background-color: var(--light-grey);
+        font-size: var(--font-size);
+        padding: 10px 20px;
+        padding-right: 50px;
+        border-radius: 20px;
+        transition: 0.3s ease;
+      }
+
+      input:focus {
+        border-color: var(--primary-color);
+      }
+
+      svg {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--account {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      font-size: 2rem;
+    }
+
+    &--cart {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      position: relative;
+      font-size: 2rem;
+
+      &_count {
+        position: absolute;
+        left: 80%;
+        top: -10%;
+        font-size: 0.9rem;
+        padding: 1px 5px;
+        border-radius: 50%;
+        background-color: var(--red);
+        color: var(--white);
+      }
+    }
+  }
+}

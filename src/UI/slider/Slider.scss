@@ -1,0 +1,23 @@
+.slider {
+  max-width: 1920px;
+  padding: 0 var(--side-padding);
+  margin: 50px auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--slide-header-margin);
+
+    &--title {
+      font-size: var(--slide-header-font);
+      color: #333;
+    }
+
+    a {
+      display: inline-block;
+      color: var(--primary-color);
+      font-size: var(--font-size);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.showcase {
+  max-width: 1920px;
+
+  &__header {
+    font-size: var(--slide-header-font);
+    margin-bottom: var(--slide-header-margin);
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .showcase {
+    &__items {
+      gap: 20px 10px;
+    }
+  }
+}

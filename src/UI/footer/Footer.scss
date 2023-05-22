@@ -1,0 +1,27 @@
+.footer {
+  max-width: var(--max-width);
+  padding: 50px var(--side-padding);
+
+  &__hr {
+    width: 100%;
+    margin-bottom: 30px;
+    height: 1px;
+    background-color: lighten($color: #000000, $amount: 50%);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+
+    & a {
+      text-decoration: none;
+    }
+
+    &--copyright {
+      font-size: var(--font-size);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.nav-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: var(--logo-font-size);
+  color: var(--primary-color) !important;
+}

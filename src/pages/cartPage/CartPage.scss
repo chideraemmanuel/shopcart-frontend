@@ -1,0 +1,249 @@
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+  padding-top: 50px;
+
+  > div:first-child {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+    gap: 50px;
+    border: 1px solid var(--light-grey);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  &__cart {
+    > span {
+      display: inline-block;
+      font-size: var(--slide-header-font);
+
+      margin-bottom: 30px;
+    }
+
+    &--clear-button {
+      background-color: var(--red);
+      border: 1px solid var(--red);
+      border-radius: 5px;
+      color: var(--white);
+      padding: 10px 20px;
+      font-size: var(--font-size);
+      margin: 15px 0;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+        color: var(--red);
+      }
+
+      @media screen and (max-width: 768px) {
+        padding: 7px 15px;
+      }
+    }
+  }
+
+  .summary {
+    > span {
+      display: inline-block;
+      font-size: var(--slide-header-font);
+      margin-bottom: 7px;
+    }
+  }
+
+  &__total {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: var(--font-size);
+    background-color: var(--light-grey);
+    border-radius: 10px;
+
+    &--coupon {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 7px;
+
+      > div {
+        position: relative;
+        input {
+          outline: none;
+          font-size: var(--font-size);
+          border: 1px solid lighten($color: #000000, $amount: 70%);
+          background-color: var(--white);
+          padding: 10px;
+          padding-right: 35px;
+          border-radius: 7px;
+        }
+
+        input.available {
+          border-color: green;
+        }
+
+        input.unavailable {
+          border-color: red;
+        }
+
+        svg {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: translateY(-50%);
+          font-size: var(--font-size);
+        }
+      }
+    }
+
+    &--table {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      > div {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+        }
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    &--hr {
+      width: 100%;
+      border-top: 1px dotted lighten($color: #000000, $amount: 50%);
+    }
+
+    &--total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      p {
+      }
+
+      span {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: var(--slide-header-font);
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    a {
+      display: inline-block;
+      background-color: var(--light-grey);
+      border: 1px solid var(--light-grey);
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: var(--font-size);
+      padding: 10px 20px;
+    }
+
+    a:first-child {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      background-color: transparent;
+    }
+
+    a:last-child {
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+
+    button {
+      display: inline-block;
+      border: 1px solid var(--primary-color);
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: var(--font-size);
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: var(--white);
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cart-page {
+    > div:first-child {
+      grid-template-columns: 1fr;
+    }
+
+    &__cart {
+      > span {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__buttons {
+      width: 80%;
+      margin: 0 auto;
+
+      a {
+        width: 50%;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      button {
+        width: 50%;
+        text-align: center;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  .cart-page__total {
+    gap: 20px;
+
+    &--coupon {
+      input {
+        padding: 7px !important;
+        padding-right: 30px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cart-page {
+    padding-top: 40px;
+
+    > div:first-child {
+      gap: 30px;
+    }
+
+    &__cart {
+      > span {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__buttons {
+      width: 100%;
+      gap: 10px;
+      margin: 0 auto;
+
+      a {
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+}

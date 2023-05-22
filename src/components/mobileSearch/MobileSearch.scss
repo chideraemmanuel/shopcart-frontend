@@ -1,0 +1,33 @@
+.mobile-search {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &__input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+
+    input {
+      outline: none;
+      border: 1px solid var(--grey);
+      padding: 10px 15px;
+      background-color: var(--grey);
+      width: 100%;
+      font-size: var(--font-size);
+      border-radius: 20px;
+    }
+
+    input:focus {
+      border-color: var(--primary-color);
+    }
+
+    svg {
+      position: absolute;
+      right: 15px;
+    }
+  }
+}

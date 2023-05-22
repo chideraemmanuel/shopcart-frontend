@@ -1,0 +1,54 @@
+:root {
+  --primary-color: #003d23;
+  --white: #fff;
+  --grey: rgb(236, 236, 234);
+  --light-grey: #f3f3f3;
+  --red: rgb(184, 1, 1);
+  --text-color: #111;
+  --font-size: 1.1rem;
+  --logo-font-size: 2rem;
+  --nav-svg-size: 1.3rem;
+  --side-padding: 50px;
+  --slide-header-font: 2rem;
+  --slide-header-margin: 30px;
+
+  --max-width: 1920px;
+  --nav-height: 100px;
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --font-size: 1rem;
+    --logo-font-size: 1.7rem;
+    --nav-svg-size: 1.5rem;
+    --slide-header-font: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --font-size: 0.9rem;
+    --logo-font-size: 1.5rem;
+    --side-padding: 30px;
+    --slide-header-font: 1.5rem;
+    --slide-header-margin: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --font-size: 0.8rem;
+    --logo-font-size: 1.1rem;
+    --slide-header-font: 1.3rem;
+    --nav-height: 80px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    --font-size: 0.7rem;
+    --logo-font-size: 1rem;
+    --nav-svg-size: 1.1rem;
+    --slide-header-font: 1rem;
+  }
+}

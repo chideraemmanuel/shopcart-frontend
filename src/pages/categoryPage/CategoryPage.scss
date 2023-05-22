@@ -1,0 +1,17 @@
+.category-page {
+  max-width: 1920px;
+  padding: 0 var(--side-padding);
+  padding-top: 50px;
+
+  &__header {
+    font-size: var(--slide-header-font);
+    margin-bottom: var(--slide-header-margin);
+    text-transform: capitalize;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .category-page {
+    padding-top: 40px;
+  }
+}

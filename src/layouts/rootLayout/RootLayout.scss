@@ -1,0 +1,21 @@
+.header {
+  background-color: var(--white);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: var(--nav-height);
+  box-shadow: 0 1px 20px rgba($color: #000000, $alpha: 0.2);
+  z-index: 15;
+}
+
+.main {
+  margin-top: var(--nav-height);
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .main {
+    margin-top: 80px;
+  }
+}

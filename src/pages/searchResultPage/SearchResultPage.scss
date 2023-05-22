@@ -1,0 +1,12 @@
+.search-result-page {
+  max-width: var(--max-width);
+  padding: 0 var(--side-padding);
+  padding-top: var(--slide-header-margin);
+
+  &__header {
+    display: inline-block;
+    font-size: var(--slide-header-font);
+    font-weight: 700;
+    margin-bottom: var(--slide-header-margin);
+  }
+}
